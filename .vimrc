@@ -27,8 +27,6 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('mattn/emmet-vim')
 call dein#add('rhysd/vim-operator-surround')
 call dein#add('kana/vim-operator-user')
-" call dein#add('joshdick/onedark.vim')
-" call dein#add('joshdick/airline-onedark.vim')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('Yggdroot/indentLine')
 call dein#add('ctrlpvim/ctrlp.vim')
@@ -43,7 +41,7 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('mhinz/vim-startify')
 call dein#add('b4b4r07/vim-hcl')
-call dein#add('altercation/vim-colors-solarized')
+call dein#add('lifepillar/vim-solarized8')
 
 call dein#add('Shougo/neocomplete.vim',     { 'on_i': 1 })
 call dein#add('Shougo/neosnippet.vim',      { 'on_i': 1 })
@@ -117,19 +115,9 @@ set wrapscan
 
 "
 " Color scheme
-"
-
-" let g:onedark_termcolors=16
-
-" colorscheme onedark
-
-"
-" Cursor
-"
-
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+let g:solarized_use16 = 1"
+set background=dark
+colorscheme solarized8
 
 "
 " Keymaps
