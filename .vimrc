@@ -72,7 +72,6 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
-set colorcolumn=80
 set confirm
 set cursorline
 set encoding=utf8
@@ -112,7 +111,6 @@ set wildmenu
 set wildmode=list:longest,full
 " set wrap
 set wrapscan
-
 "
 " Color scheme
 let g:solarized_use16 = 1"
