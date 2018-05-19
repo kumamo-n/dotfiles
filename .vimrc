@@ -19,6 +19,7 @@ call dein#begin(s:dein_dir)
 
 call dein#add('Shougo/dein.vim')
 call dein#add('scrooloose/nerdtree')
+call dein#add('scrooloose/syntastic')
 call dein#add('jistr/vim-nerdtree-tabs')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
 call dein#add('airblade/vim-gitgutter')
@@ -42,6 +43,8 @@ call dein#add('terryma/vim-multiple-cursors')
 call dein#add('mhinz/vim-startify')
 call dein#add('b4b4r07/vim-hcl')
 call dein#add('lifepillar/vim-solarized8')
+call dein#add('fatih/vim-go')
+call dein#add('vim-jp/vim-go-extra')
 
 call dein#add('Shougo/neocomplete.vim',     { 'on_i': 1 })
 call dein#add('Shougo/neosnippet.vim',      { 'on_i': 1 })
@@ -84,7 +87,7 @@ set ignorecase
 set incsearch
 set laststatus=2
 set list
-set listchars=eol:¬
+set listchars=tab:>-
 set mouse=a
 set nobackup
 set nowritebackup
@@ -111,6 +114,7 @@ set wildmenu
 set wildmode=list:longest,full
 " set wrap
 set wrapscan
+set completeopt=menu,preview
 "
 " Color scheme
 let g:solarized_use16 = 1"
@@ -234,6 +238,19 @@ endfunction
 "
 " vim-startify
 "
+
+"
+"go
+"
+let g:syntastic_mode_map = { 'mode': 'passive',
+    \ 'active_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['go', 'golint']
+
+autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+autocmd FileType go :match goErr /\<err\>/
+
+
 
 nnoremap <Leader>h :Startify<CR>
 
