@@ -1,4 +1,4 @@
- DOT_FILES=(.vimrc .tmux.conf)
+ DOT_FILES=(.vimrc .tmux.conf .zshrc)
 
  for file in ${DOT_FILES[@]}
  do
