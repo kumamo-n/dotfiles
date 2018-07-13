@@ -1,0 +1,77 @@
+[core]
+	excludesfile = /Users/tomohito/.gitignore_global
+	editor = /usr/bin/vim
+
+
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+
+
+[user]
+	name = kumamo-n
+	email = kmntmht116@gmail.com
+
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+
+[alias]
+  ss = status
+
+  gr  = grep
+  gn  = grep -n
+
+  rsh = reset --hard
+  rss = reset --soft
+
+  b   = branch -a
+  br  = branch -r
+
+  k  = checkout
+  kb = checkout-head
+  km = checkout master
+  kd = checkout develop
+
+
+  d   = diff
+  ds  = diff --staged
+  dn  = diff --name-only
+  dm  = diff master
+  d1  = diff HEAD~
+  d2  = diff HEAD~~
+  d3  = diff HEAD~~~
+  d4  = diff HEAD~~~~
+  d5  = diff HEAD~~~~~
+
+  c   = commit
+  ca  = commit --amend
+  cm  = commit -m
+
+  r   = remote
+  ra  = remote add
+  ru  = remote set-url
+  ruo = remote set-url origin
+
+  gr  = grep
+  gn  = grep -n
+
+  p   = push
+  pb  = !git push -u origin $(git branch -a | grep '^*' | cut -b 3-);
+  pom = push -u origin master
+
+
+[ghp]
+  root = ~/src
+
+[ghq "alias"]
+  g = get
+  l = look
+  ls = list
