@@ -1,6 +1,6 @@
 [core]
-	excludesfile = /Users/tomohito/.gitignore_global
-	editor = /usr/bin/vim
+  excludesfile = /Users/tomohito/.gitignore_global
+  editor = /usr/bin/vim
 
 
 [color]
@@ -12,15 +12,15 @@
 
 
 [user]
-	name = kumamo-n
-	email = kmntmht116@gmail.com
+  name = kumamo-n
+  email = kmntmht116@gmail.com
 
 
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 
 
 [alias]
