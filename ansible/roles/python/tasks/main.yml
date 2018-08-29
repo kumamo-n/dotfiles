@@ -1,35 +1,35 @@
-  - set_fact:
+- set_fact:
     python: {}
 
-  - name: check pyenv
+- name: check pyenv
   command: |
     bash -lc 'which pyenv'
   register: which_pyenv
   ignore_errors: yes
 
-  - name: install pyenv
+- name: install pyenv
   command: |
     bash -lc 'anyenv install pyenv'
   when: which_pyenv.rc > 0
 
-  - name: get installed versions
+- name: get installed versions
   command: |
     bash -lc 'pyenv versions'
   register: installed_versions
 
-  - name: install python
+- name: install python
   command: |
     bash -lc 'pyenv install {{ item | quote }}'
   when: |
     python.versions and installed_versions.stdout.find(item) == -1
   with_items: '{{ python.versions }}'
 
-  - name: set global python
+- name: set global python
   command: |
     bash -lc 'pyenv global {{ python.versions[0] | quote }}'
   when: python.versions
 
-  - name: rehash
+- name: rehash
   shell: |
     if [ -f "$DOTSHIM_FILE" ]; then
       rm -f "$DOTSHIM_FILE"
@@ -38,7 +38,7 @@
   environment:
     DOTSHIM_FILE: '{{ anyenv.envs_dir }}/pyenv/.pyenv-shim'
 
-  - name: install packages
+- name: install packages
   pip:
     name:               '{{ item.name | default(item) }}'
     extra_args:         '{{ item.extra_args | default("") }}'

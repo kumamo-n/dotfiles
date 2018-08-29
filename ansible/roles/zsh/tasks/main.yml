@@ -1,33 +1,33 @@
-  - name: install zsh
+- name: install zsh
   homebrew:
     name:  zsh
     state: present
 
-  - name: search zsh bin path
+- name: search zsh bin path
   command: |
     which zsh
   register: which_zsh
   ignore_errors: yes
 
-  - debug:
-    msg: '{{ which_zsh.stdout }}'
+- debug:
+  msg: '{{ which_zsh.stdout }}'
 
-  - name: add zsh to /etc/shells
+- name: add zsh to /etc/shells
   lineinfile:
     dest: /etc/shells
     line: '{{ which_zsh.stdout }}'
   become: yes
 
-  - name: check presence of /etc/zshenv
+- name: check presence of /etc/zshenv
   stat: path=/etc/zshenv
   register: zshenv_stat
 
-  - name: Rename /etc/zshenv
+- name: Rename /etc/zshenv
   command: |
     sudo mv /etc/zshenv /etc/_zshenv
   when: zshenv_stat.stat.exists
 
-  - name: change login shell to zsh
+- name: change login shell to zsh
   command: |
     chpass -s '{{ which_zsh.stdout }}'
   register: chpass_result
