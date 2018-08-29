@@ -10,7 +10,7 @@
   ignore_errors: yes
 
 - debug:
-  msg: '{{ which_zsh.stdout }}'
+    msg: '{{ which_zsh.stdout }}'
 
 - name: add zsh to /etc/shells
   lineinfile:
