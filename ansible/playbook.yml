@@ -1,0 +1,5 @@
+- name: kumamo-n development environment
+  hosts: all
+  remote-user: root
+  sudo: yes
+
