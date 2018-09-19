@@ -2,7 +2,20 @@
 # http://mollifier.mit-license.org/
 
 ########################################
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+fpath=(
+  ~/.zsh/plugins/zsh-completions/src
+  ~/.zsh/completions
+  $fpath
+)
+
+autoload -Uz compinit
+compinit
+
+for file in ~/.zsh/src/{functions,prompt,term}.zsh; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
 
 # 色を使用出来るようにする
 autoload -Uz colors
