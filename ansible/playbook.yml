@@ -37,7 +37,9 @@
       - role: golang
         tags: ['lang', 'golang']
       - role: php
-        tags: ['lang', 'golang']
+        tags: ['lang', 'php']
+      - role: nodejs
+        tags: ['lang', 'nodejs']
       #  app
       #-----------------------------------------------
       - role: vim
