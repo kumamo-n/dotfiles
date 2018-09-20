@@ -23,8 +23,6 @@ call dein#add('scrooloose/syntastic')
 call dein#add('jistr/vim-nerdtree-tabs')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
 call dein#add('airblade/vim-gitgutter')
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
 call dein#add('mattn/emmet-vim')
 call dein#add('rhysd/vim-operator-surround')
 call dein#add('kana/vim-operator-user')
@@ -69,6 +67,8 @@ filetype plugin indent on
 " General settings
 "
 
+
+scriptencoding utf-8
 syntax enable
 
 set autoindent
@@ -143,15 +143,6 @@ inoremap jj <ESC>
 " Plugin settings
 "
 
-" vim-airline
-
-let g:airline_theme = 'term'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_tab_type = 0
 
 " vim-fugitive
 
@@ -161,7 +152,7 @@ let g:airline#extensions#branch#enabled = 1
 
 let NERDTreeShowHidden = 1
 
-nmap <Leader>n :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " vim-nerdtree-tabs
 
