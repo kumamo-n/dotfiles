@@ -2,6 +2,10 @@
 # http://mollifier.mit-license.org/
 
 ########################################
+
+zmodload -i zsh/mathfunc
+zmodload -i zsh/complist
+
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 fpath=(
@@ -16,6 +20,7 @@ compinit
 for file in ~/.zsh/src/{functions,prompt,term}.zsh; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
+unset file
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -35,6 +40,37 @@ SAVEHIST=1000000
 # 2行表示
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
+
+
+#  Fish shell like syntax highlighting
+#-----------------------------------------------
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+ZSH_HIGHLIGHT_STYLES[default]=none
+ZSH_HIGHLIGHT_STYLES[unknown-token]=none
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=magenta
+ZSH_HIGHLIGHT_STYLES[alias]=fg=red
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=magenta
+ZSH_HIGHLIGHT_STYLES[function]=fg=red
+ZSH_HIGHLIGHT_STYLES[cursor]=none
+ZSH_HIGHLIGHT_STYLES[command]=fg=red
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=red
+ZSH_HIGHLIGHT_STYLES[commandseparator]=none
+ZSH_HIGHLIGHT_STYLES[hashed-command]=none
+ZSH_HIGHLIGHT_STYLES[path]=fg=green
+ZSH_HIGHLIGHT_STYLES[path_prefix]=fg=green
+ZSH_HIGHLIGHT_STYLES[path_approx]=fg=green
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=red
+ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=white
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=white
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=green
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=green
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[assign]=fg=yellow
+
 
 
 # 単語の区切り文字を指定する
