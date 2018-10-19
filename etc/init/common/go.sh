@@ -33,7 +33,7 @@ case "$(get_os)" in
 
     # Case of Linux
     linux)
-        uri="https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz"
+        uri="https://storage.googleapis.com/golang/go1.11.linux-amd64.tar.gz"
         tar="${uri##*/}"
         grt="/usr/local/go"
         dir="go"
