@@ -3,7 +3,6 @@ CANDIDATES := $(wildcard .??*) bin
 EXCLUSIONS := .DS_Store .git .gitmodules .travis.yml
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
-
 .DEFAULT_GOAL := help
 
 all:
