@@ -49,7 +49,7 @@ repo = 'thinca/vim-visualstar'
 repo = 'sickill/vim-pasta'
 
 [[plugins]]
-call dein#add('Yggdroot/indentLine')
+repo = 'Yggdroot/indentLine'
 
 
 
