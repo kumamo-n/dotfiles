@@ -3,10 +3,7 @@
 "
 if 1
   if $DEBUG ==# ''
-    execute 'source' fnamemodify(expand('<sfile>'), ':h').'/.vim/scripts/init.vim'
-  else
-    execute 'source' fnamemodify(expand('<sfile>'), ':h').'/.vim/rc/init.vim'
+    execute 'source' fnamemodify(expand('<sfile>'), ':h').'/vim/scripts/init.vim'
   endif
-  " execute 'source' fnamemodify(expand('<sfile>'), ':h').'/.vim/rc/init.vim'
 endif
 
