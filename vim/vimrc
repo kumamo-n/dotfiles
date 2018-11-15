@@ -1,0 +1,3 @@
+if 1
+  execute 'source' fnamemodify(expand('<sfile>'), ':h').'/scripts/init.vim'
+endif
