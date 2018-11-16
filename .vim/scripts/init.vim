@@ -97,7 +97,8 @@ if g:env.is_starting
   endif
 endif
 
-call s:load('dein.vim', g:false)
+call s:load('dein.vim')
+call s:load('mapping.vim')
 call s:load('option.vim')
 
 " Must be written at the last.  see :help 'secure'.
