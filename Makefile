@@ -19,3 +19,8 @@ deploy: ## Create symlink to home directory
 
 init: ## Setup environment settings
 	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/init/init.sh
+
+clean: ## Remove the dot files and this repo
+	@echo 'Remove dot files in your home directory...'
+	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
+	-rm -rf $(DOTPATH)
