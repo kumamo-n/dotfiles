@@ -97,7 +97,7 @@ if g:env.is_starting
   endif
 endif
 
-call s:load('dein.vim')
+call s:load('plug.vim')
 call s:load('base.vim')
 call s:load('view.vim')
 call s:load('mapping.vim')
