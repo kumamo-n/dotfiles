@@ -55,7 +55,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'dag/vim-fish', { 'for': 'fish' }
     Plug 'zplug/vim-zplug', { 'for': 'zplug' }
     Plug 'chase/vim-ansible-yaml'
-    Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
     Plug 'cespare/vim-toml', { 'for': 'toml' }
     Plug 'elzr/vim-json', { 'for': 'json' }
     Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
