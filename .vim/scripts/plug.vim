@@ -89,7 +89,7 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'Townk/vim-autoclose'
 
     " colorscheme
-    Plug 'b4b4r07/solarized.vim '
+    Plug 'lifepillar/vim-solarized8'
     Plug 'w0ng/vim-hybrid'
     Plug 'junegunn/seoul256.vim'
     Plug 'nanotech/jellybeans.vim'
