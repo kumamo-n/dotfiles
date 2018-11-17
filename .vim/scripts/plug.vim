@@ -18,9 +18,7 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     call plug#begin(g:plug.base)
 
     " file and directory
-    Plug 'b4b4r07/vim-shellutils'
-    Plug 'b4b4r07/mru.vim'
-    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
     Plug 'justinmk/vim-dirvish'
     Plug 'tweekmonster/fzf-filemru'
@@ -36,7 +34,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'thinca/vim-prettyprint', { 'on': 'PP' }
     Plug 'tyru/open-browser.vim'
     Plug 'tyru/open-browser-github.vim'
-    Plug 'b4b4r07/vim-hcl'
     Plug 'fatih/vim-hclfmt'
     Plug has('lua') ? 'Shougo/neocomplete.vim' : 'Shougo/neocomplcache'
     Plug g:env.is_gui ? 'itchyny/lightline.vim' : ''
@@ -61,7 +58,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
     Plug 'cespare/vim-toml', { 'for': 'toml' }
     Plug 'elzr/vim-json', { 'for': 'json' }
-    Plug 'b4b4r07/vim-ltsv', { 'for': 'ltsv' }
     Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
     Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
     Plug 'leafgarland/typescript-vim',{'for': 'javascript'}
@@ -99,8 +95,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'shawncplus/phpcomplete.vim'
     Plug 'm2mdas/phpcomplete-extended'
 
-    Plug 'b4b4r07/vim-unicode'
-    Plug 'b4b4r07/vim-sqlfmt'
     Plug 'lepture/vim-jinja'
     Plug 'mattn/gist-vim'
 
