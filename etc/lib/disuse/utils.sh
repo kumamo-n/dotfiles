@@ -42,7 +42,7 @@ function trim()
 # return all words in A that do not exist in B. Arrays in bash are insane
 # (and not in a good way).
 # From http://stackoverflow.com/a/1617303/142339
-# and Zshized by b4b4r07
+# and Zshized by kumamo-n
 function setdiff()
 {
     is_zsh && setopt localoptions SH_WORD_SPLIT

@@ -1,16 +1,16 @@
 #!/bin/bash
 #
-# @(#) "The shellscript library" $0 ver.0.1 (c)BABAROT
+# @(#) "The shellscript library" $0 ver.0.1 (c)kumamo-n
 #
 #
-# Copyright (c) 2014 b4b4r07 a.k.a BABAROT
+# Copyright (c) 2020 kumamo-n
 #
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
 #
-#  * Redistributions of source code must retain the above copyright notice, 
+#  * Redistributions of source code must retain the above copyright notice,
 #    this list of conditions and the following disclaimer.
 #
 #  * Redistributions in binary form must reproduce the above copyright notice,
@@ -412,17 +412,17 @@ reverse() {
     BEGIN {
         sort_exe = "sort -t \"\034\" -nr"
     }
-    
+
     {
         printf("%d\034%s\n", NR, $0) |& sort_exe;
     }
-    
+
     END {
         close(sort_exe, "to");
-    
+
         while ((sort_exe |& getline var) > 0) {
             split(var, arr, /\034/);
-    
+
             print arr[2];
         }
         close(sort_exe);
@@ -448,7 +448,7 @@ readlinkf() {
         TARGET_FILE=`basename $TARGET_FILE`
     done
 
-    # Compute the canonicalized name by finding the physical path 
+    # Compute the canonicalized name by finding the physical path
     # for the directory we're in and appending the target file.
     PHYS_DIR=`pwd -P`
     RESULT=$PHYS_DIR/$TARGET_FILE
