@@ -35,8 +35,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'tyru/open-browser.vim'
     Plug 'tyru/open-browser-github.vim'
     Plug 'fatih/vim-hclfmt'
-    Plug has('lua') ? 'Shougo/neocomplete.vim' : 'Shougo/neocomplcache'
-    Plug g:env.is_gui ? 'itchyny/lightline.vim' : ''
     Plug 'Dkendal/fzy-vim'
     Plug 'raphael/vim-present-simple'
     Plug 'mattn/webapi-vim'
