@@ -88,7 +88,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'whatyouhide/vim-gotham'
 
     Plug 'plasticboy/vim-markdown',      { 'for': 'markdown' }
-    Plug 'm2mdas/phpcomplete-extended'
 
     Plug 'lepture/vim-jinja'
     Plug 'mattn/gist-vim'
