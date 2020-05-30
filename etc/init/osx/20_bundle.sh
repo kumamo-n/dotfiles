@@ -16,20 +16,17 @@ if ! is_osx; then
 fi
 
 if has "brew"; then
-    if ! brew tap Homebrew/bundle; then
-        log_fail "error: failed to tap Homebrew/bundle"
-        exit 1
-    fi
 
-    builtin cd "$DOTPATH"/etc/init/assets/brew
-    if [ ! -f Brewfile ]; then
-        brew bundle dump
+  for formula in $(cat "$DOTPATH/etc/init/assets/brew/formulas.txt"); do
+    if brew install "$formula" > /dev/null 2>&1; then
+      log_pass " + $formula was successfully installed"
+    else
+      log_fail " x [error] $formula was unsuccessfully installed";
     fi
+  done
 
-    brew bundle
 else
     log_fail "error: require: brew"
     exit 1
 fi
 
-log_pass "brew: tapped successfully"

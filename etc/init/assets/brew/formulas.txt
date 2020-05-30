@@ -24,7 +24,7 @@ nodebrew
 openssl
 peco
 python
-php@7.4
+php@7.3
 anyenv
 readline
 reattach-to-user-namespace
