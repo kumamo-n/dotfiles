@@ -49,8 +49,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'jnwhiteh/vim-golang', { 'for': 'go' }
     "Plug 'zaiste/tmux.vim', { 'for': 'tmux' }
     Plug 'keith/tmux.vim', { 'for': 'tmux' }
-    Plug 'dag/vim-fish', { 'for': 'fish' }
-    Plug 'zplug/vim-zplug', { 'for': 'zplug' }
     Plug 'cespare/vim-toml', { 'for': 'toml' }
     Plug 'elzr/vim-json', { 'for': 'json' }
     Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
