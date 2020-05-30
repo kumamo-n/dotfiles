@@ -103,4 +103,7 @@ export INTERACTIVE_FILTER="fzf:peco:percol:gof:pick"
 # keybind ^X^X
 export ONELINER_FILE="$DOTPATH/doc/misc/commands.txt"
 
+PROMPT="%F{white}%d
+%F{blue}$ %f"
+
 [[ -f ~/.secret ]] && source ~/.secret
