@@ -24,7 +24,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'tweekmonster/fzf-filemru'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-endwise'
-    Plug 'Shougo/vimproc.vim',  { 'do': 'make' }
     Plug 'vim-jp/vimdoc-ja'
     Plug 'osyo-manga/vim-anzu'
     Plug 'tyru/caw.vim'
@@ -89,7 +88,6 @@ if g:plug.ready() && g:env.vimrc.plugin_on
     Plug 'whatyouhide/vim-gotham'
 
     Plug 'plasticboy/vim-markdown',      { 'for': 'markdown' }
-    Plug 'shawncplus/phpcomplete.vim'
     Plug 'm2mdas/phpcomplete-extended'
 
     Plug 'lepture/vim-jinja'
