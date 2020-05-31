@@ -12,7 +12,6 @@ fi
 # $DOTPATH/bin/tmux
 
 if [[ -f ~/.zplug/init.zsh ]]; then
-  echo 'zshr'
     export ZPLUG_LOADFILE=~/.zsh/zplug.zsh
     # For development version of zplug
     # source ~/.zplug/init.zsh
