@@ -9,13 +9,14 @@ fi
 
 # tmux_automatically_attach attachs tmux session
 # automatically when your are in zsh
-# $DOTPATH/bin/tmuxx
+# $DOTPATH/bin/tmux
 
 if [[ -f ~/.zplug/init.zsh ]]; then
+  echo 'zshr'
     export ZPLUG_LOADFILE=~/.zsh/zplug.zsh
     # For development version of zplug
     # source ~/.zplug/init.zsh
-    source ~/src/github.com/zplug/zplug/init.zsh
+    source ~/.zplug/init.zsh
 
     if ! zplug check --verbose; then
         printf "Install? [y/N]: "
