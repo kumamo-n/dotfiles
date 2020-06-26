@@ -36,7 +36,7 @@ zplug "peco/peco", \
     from:gh-r, \
     frozen:1
 
-zplug "motemen/ghq", \
+zplug "x-motemen/ghq", \
     as:command, \
     from:gh-r, \
     rename-to:ghq
